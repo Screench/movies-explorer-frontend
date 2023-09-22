@@ -1,0 +1,11 @@
+.register {
+  display: flex;
+  padding: 70px 0;
+  justify-content: center;
+}
+
+@media (max-width: 420px) {
+  .register {
+    padding: 56px 30px 30px;
+  }
+}
