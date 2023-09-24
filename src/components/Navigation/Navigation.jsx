@@ -10,7 +10,7 @@ export default function Navigation() {
 
   return (
     <nav className='nav'>
-      <Link className='nav__logo' to='/'><img className='nav__logo' src={siteLogo} alt='Логотип' /></Link>
+      <Link to='/'><img className='nav__logo' src={siteLogo} alt='Логотип' /></Link>
       {location.pathname === '/' ? <MainNavigation /> : <ProfileNavigation />}
     </nav>
   )

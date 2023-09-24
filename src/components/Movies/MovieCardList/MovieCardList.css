@@ -1,11 +1,11 @@
-.movies__container {
+.movies-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 79px 0 0 0;
 }
 
-.movies__list {
+.movies-container__list {
   margin: 0;
   padding: 0;
   display: grid;
@@ -17,25 +17,25 @@
 }
 
 @media (max-width: 990px) {
-  .movies__list {
+  .movies-container__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 24px;
   }
 
-  .movies__container {
+  .movies-container {
     padding: 74px 0 12px;
   }
 }
 
 @media (max-width: 670px) {
-  .movies__list {
+  .movies-container__list {
     grid-template-columns: 1fr;
     row-gap: 16px;
   }
 }
 
 @media (max-width: 400px) {
-  .movies__container {
+  .movies-container {
     padding: 50px 0 0 0;
   }
 }

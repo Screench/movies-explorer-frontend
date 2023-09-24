@@ -9,10 +9,10 @@ export default function Footer() {
       <div className='footer__wrapper'>
         <span className='footer__span'>&copy; 2020</span>
         <ul className='footer__links'>
-          <li className='footer__link'>
+          <li>
             <Link className='footer__link' to='https://praktikum.yandex.ru' target='_blank'>Яндекс.Практикум</Link>
           </li>
-          <li className='footer__link'>
+          <li>
             <Link className='footer__link' to='https://github.com/Screench' target='_blank'>
               GitHub
             </Link>

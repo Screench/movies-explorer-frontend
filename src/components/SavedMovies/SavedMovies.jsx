@@ -8,7 +8,7 @@ export default function SavedMovies({ textButton }) {
   return (
     <>
       <Header />
-      <main className='saved__movies'>
+      <main className='movies'>
         <SearchForm />
         <MovieCardList textButton={textButton} />
       </main>

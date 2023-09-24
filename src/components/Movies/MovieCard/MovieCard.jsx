@@ -1,16 +1,18 @@
 import React from 'react';
 import './MovieCard.css';
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export default function MovieCard({ movie, textButton }) {
 
   const [isChecked, setIsChecked] = useState(false);
+  const location = useLocation();
 
   const handleMovieCheck = () => {
     setIsChecked(isChecked => !isChecked);
   }
 
-  const movieButtonCheck = (`movie__button ${isChecked && 'movie__button_check'}`);
+  const movieButtonCheck = (`movie__button ${isChecked && 'movie__button_check'} ${location.pathname === '/saved-movies' ? 'movie__button_saved-movies' : ''}`);
 
   return (
     <li className='movie'>

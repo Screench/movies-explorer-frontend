@@ -24,7 +24,7 @@ export default function App() {
           <Routes>
             <Route path='/' element={<Main />} />
             <Route path='/movies' element={<Movies textButton='Сохранить' />} />
-            <Route path='/saved-movies' element={<SavedMovies textButton='✖' />} />
+            <Route path='/saved-movies' element={<SavedMovies />} />
             <Route path='/profile' element={<Account />} />
             <Route path='/signup' element={<Register />} />
             <Route path='/signin' element={<Login />} />
