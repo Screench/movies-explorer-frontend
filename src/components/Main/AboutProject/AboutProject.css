@@ -1,0 +1,168 @@
+.about {
+  padding: 110px 70px 100px;
+}
+
+.about__title {
+  margin: 0;
+  padding: 0 0 23px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  border-bottom: 1px solid #dadada;
+}
+
+.about__project {
+  margin: 0;
+  gap: 40px;
+  padding: 70px 0 0;
+  display: grid;
+  list-style: none;
+  grid-template-columns: auto auto;
+}
+
+.about__project-item {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  max-width: 550px;
+}
+
+.about__project-subtitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.8px;
+}
+
+.about__project-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.about__week {
+  display: grid;
+  gap: 5px 0;
+  grid-template-columns: 1fr 4fr;
+  padding-top: 110px;
+}
+
+.about__week-style {
+  margin: 0;
+  align-items: center;
+  display: flex;
+  height: 36px;
+  width: 100%;
+
+}
+
+.about__week-subtitle {
+  background-color: #303030;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  justify-content: center;
+}
+
+.about__week-subtitle_mod {
+  color: #000;
+  background-color: #3ddc84;
+}
+
+.about__week-description {
+
+  color: #8b8b8b;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  justify-content: center;
+}
+
+@media (max-width: 770px) {
+  .about {
+    padding: 90px 50px 81px;
+  }
+
+  .about__project {
+    gap: 33px;
+  }
+
+  .about__project-item {
+    gap: 22px;
+  }
+
+  .about__project-text {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    font-style: normal;
+
+  }
+
+  .about__week {
+    gap: 3px 0;
+    grid-template-columns: 1.06fr 4fr;
+    padding-top: 93px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 71px 18px;
+  }
+
+  .about__title {
+    padding: 0 0 28px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.72px;
+
+  }
+
+  .about__project-subtitle {
+    font-size: 20px;
+  }
+
+  .about__project-text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .about__project {
+    gap: 50px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .about__project-subtitle {
+    font-size: 18px;
+  }
+
+  .about__project {
+    gap: 56px;
+    padding-top: 60px;
+  }
+
+  .about__project-item {
+    gap: 16px;
+  }
+
+  .about__week {
+    gap: 11px 0;
+    grid-template-columns: 2.2fr 4fr;
+    grid-template-rows: 23px 15px;
+    padding-top: 59px;
+  }
+
+  .about__week-subtitle {
+    font-size: 11px;
+  }
+
+  .about__week-description {
+    font-size: 11px;
+  }
+}
