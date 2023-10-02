@@ -6,4 +6,4 @@
 diploma.nomoredomainsicu.ru
 api.diploma.nomoredomainsicu.ru
 
-(pull request)[https://github.com/Screench/movies-explorer-frontend/pull/3]
+(pull request)[https://github.com/Screench/movies-explorer-frontend/pull/4]
