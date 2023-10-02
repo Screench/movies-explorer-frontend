@@ -70,7 +70,7 @@ export default function Movies({ handleLikeFilm, onRemoveCard, savedMovies, logg
   }, [])
 
   useEffect(() => {
-    if (localStorage.getItem('movieSearchResults')) {
+    if (localStorage.getItem('movieSearch')) {
       if (filtratedMovies.length === 0) {
         setIsNotFound(true)
       } else { setIsNotFound(false) }

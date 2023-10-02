@@ -9,8 +9,8 @@ export default function SearchForm({ onSearchMovies, onMoviesFiltration, isShort
   const [search, setSearch] = useState('')
 
   useEffect(() => {
-    if (location.pathname === '/movies' && localStorage.getItem('movieSearchResults')) {
-      const localSearch = localStorage.getItem('movieSearchResults')
+    if (location.pathname === '/movies' && localStorage.getItem('movieSearch')) {
+      const localSearch = localStorage.getItem('movieSearch')
       setSearch(localSearch)
     }
   }, [location])
@@ -42,7 +42,7 @@ export default function SearchForm({ onSearchMovies, onMoviesFiltration, isShort
           value={search || ''}
           onChange={updateSearch}
         ></input>
-        <button className='search__button' type='submit'>Поиск</button>
+        <button className='search__button' type='submit' >Поиск</button>
       </form>
       <ToggleSwitch 
         onMoviesFiltration={onMoviesFiltration}

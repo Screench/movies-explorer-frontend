@@ -20,10 +20,9 @@ export default function Login({ onAuthorization, isLoading }) {
       question='Еще не зарегистрированы?'
       path='/signup'
       linkText=' Регистрация'
-      
       onSubmit={updateUserData}
       isLoading={isLoading}
-      isDisabledButton={!isFormValid}>
+      isDisabledButton={!isFormValid || isLoading}>
       <label className='form__label'>
         <div className='form__input-name'>E-mail</div>
         <input

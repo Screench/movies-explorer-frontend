@@ -75,7 +75,7 @@ export default function Account({ isLoading, loggedIn, signout, onUpdateUser }) 
             <span className='account__input-err'>{errors.email}</span>
           </label>
           <button type='submit'
-            disabled={!isFormValid ? true : false}
+            disabled={!isFormValid || isLoading}
             className={
               !isFormValid || isLoading || isLastValues
                 ? 'account__btn-save form__btn-save_inactive'

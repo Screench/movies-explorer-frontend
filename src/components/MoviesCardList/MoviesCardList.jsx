@@ -65,9 +65,10 @@ export default function MoviesCardList({
   return (
     <section className='cards'>
       {isLoading && <Preloader />}
-      {isNotFound && !isLoading && (<SearchError errorText={'Ничего не найдено'} />)}
+      {cards.length === 0 && isNotFound && !isLoading && (<SearchError errorText={'Ничего не найдено'} />)}
       {isFetchError && !isLoading && (<SearchError errorText={'Проблема с соединением. Попробуйте позже'}/>)}
       {!isLoading && !isFetchError && !isNotFound && (
+        
         <>
           {pathname === '/saved-movies' ? (
             <>
