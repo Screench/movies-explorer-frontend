@@ -5,3 +5,5 @@
  
 diploma.nomoredomainsicu.ru
 api.diploma.nomoredomainsicu.ru
+
+https://github.com/Screench/movies-explorer-frontend/pull/3
