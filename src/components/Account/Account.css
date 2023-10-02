@@ -84,8 +84,12 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  cursor: pointer;
   color: #fff;
+  cursor: pointer;
+}
+
+.account__btn-save_inactive {
+ cursor: not-allowed;
 }
 
 .account__exit-btn {

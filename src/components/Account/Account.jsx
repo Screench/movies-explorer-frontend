@@ -17,6 +17,9 @@ export default function Account({ isLoading, loggedIn, signout, onUpdateUser }) 
 
   function updateUserData(event) {
     event.preventDefault()
+    if (isLastValues) {
+      return;
+    }
     onUpdateUser({
       name: inputFieldValues.name,
       email: inputFieldValues.email,
