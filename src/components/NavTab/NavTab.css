@@ -1,0 +1,39 @@
+.nav-tab {
+  bottom: 75px;
+  position: absolute;
+  
+}
+
+.nav-tab__link {
+  height: 36px;
+  width: 129px;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  
+}
+
+.nav-tab__link:hover {
+  transform: translate(0, -2px) scale(1.03);
+  background: #2be080;
+}
+
+@media (max-width: 1024px) {
+  .nav-tab {
+    transform: translateX(-40%);
+    left: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-tab {
+    bottom: 30px;
+  }
+}

@@ -1,0 +1,150 @@
+.profile {
+  max-width: 410px;
+  box-sizing: border-box;
+  padding: 74px 0 70px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.account__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 123px;
+  text-align: center;
+}
+
+.account__form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.account__label {
+  justify-content: space-between;
+  position: relative;
+  display: flex;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  align-items: flex-start;
+  min-height: 30px;
+  cursor: text;
+}
+
+.account__input {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: right;
+  margin: 0;
+  width: 350px;
+  text-align: right;
+  color: #fff;
+  outline: none;
+  background: #202020;
+  border: none;
+
+}
+
+.account__input-err {
+  margin: 0;
+  padding: 0;
+  top: 16px;
+  right: 0;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ee3465;
+  position: absolute;
+
+  text-align: right;
+}
+
+.account__input:focus {
+  background-color: #202020;
+}
+
+.account__border {
+  margin-bottom: 17px;
+  border-bottom: 1px solid #424242;
+
+}
+
+.account__btn-save {
+  margin-top: 205px;
+  min-height: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  font-size: 13px;
+  display: flex;
+  border: none;
+  background: #202020;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.account__btn-save_inactive {
+ cursor: not-allowed;
+}
+
+.account__exit-btn {
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #ee3465;
+  margin-top: 16px;
+  min-height: 16px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.account__exit-link {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .profile {
+    padding-top: 144px;
+
+  }
+
+  .account__btn-save {
+    margin-top: 193px;
+  }
+
+  .account__title {
+    margin-bottom: 96px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile {
+    padding: 70px 30px 40px 30px;
+  }
+
+  .account__input {
+    width: 150px;
+  }
+
+  .account__title {
+    margin-bottom: 80px;
+  }
+
+  .account__exit-btn {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .account__btn-save {
+    margin-top: 300px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
