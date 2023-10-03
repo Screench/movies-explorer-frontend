@@ -5,7 +5,7 @@ import { findShortDurationMovie, filterByMovieDuration } from '../../utils/utils
 import * as movies from '../../utils/MoviesApi'
 import './Movies.css'
 
-export default function Movies({ handleLikeFilm, onRemoveCard, savedMovies, loggedIn }) {
+export default function Movies({ handleLikeFilm, onRemoveCard, savedMovies, loggedIn, }) {
 
   const [filtratedMovies, setFiltratedMovies] = useState([])
   const [startMovies, setStartMovies] = useState([])
@@ -82,7 +82,8 @@ export default function Movies({ handleLikeFilm, onRemoveCard, savedMovies, logg
       <SearchForm
         onMoviesFiltration={switchToShortDurationFilm}
         isShortDurationMovies={isShortDurationMovies}
-        onSearchMovies={handleMoviesSearch} />
+        onSearchMovies={handleMoviesSearch}
+        isLoading={isLoading} />
       <MoviesCardList
         cards={filtratedMovies}
         isLikedFilms={false}

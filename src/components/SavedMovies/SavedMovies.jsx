@@ -3,7 +3,7 @@ import SearchForm from '../SearchForm/SearchForm'
 import MoviesCardList from '../MoviesCardList/MoviesCardList'
 import { filterByMovieDuration, findShortDurationMovie } from '../../utils/utils'
 
-export default function SavedMovies({ savedMovies, onRemoveCard, loggedIn }) {
+export default function SavedMovies({ savedMovies, onRemoveCard, loggedIn, isLoading }) {
   const [filtratedMovies, setFiltratedMovies] = useState(savedMovies)
   const [isShortDurationMovies, setIsShortDurationMovies] = useState(false)
   
@@ -37,7 +37,8 @@ export default function SavedMovies({ savedMovies, onRemoveCard, loggedIn }) {
     <section className='movies'>
       <SearchForm 
         onSearchMovies={handleMoviesSearch}
-        onMoviesFiltration={switchToShortDurationFilm}/>
+        onMoviesFiltration={switchToShortDurationFilm}
+        isLoading={isLoading}/>
       <MoviesCardList 
         cards={filtratedMovies}
         isLikedFilms={true}

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch'
 import './SearchForm.css'
 
-export default function SearchForm({ onSearchMovies, onMoviesFiltration, isShortDurationMovies }) {
+export default function SearchForm({ onSearchMovies, onMoviesFiltration, isShortDurationMovies, isLoading }) {
   const location = useLocation()
   const [isSearchError, setIsSearchError] = useState(false)
   const [search, setSearch] = useState('')
@@ -42,7 +42,7 @@ export default function SearchForm({ onSearchMovies, onMoviesFiltration, isShort
           value={search || ''}
           onChange={updateSearch}
         ></input>
-        <button className='search__button' type='submit' >Поиск</button>
+        <button className='search__button' type='submit' disabled={isLoading}>Поиск</button>
       </form>
       <ToggleSwitch 
         onMoviesFiltration={onMoviesFiltration}

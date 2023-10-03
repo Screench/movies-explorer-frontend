@@ -77,6 +77,9 @@ export default function App() {
         setIsSuccess(false)
         setInfoPopupText(`${err} Попробуйте еще раз`)
       })
+      .finally(() => {
+        setIsLoading(false)
+      })
   }
 
   function handleLogin({ email, password }) {
@@ -96,6 +99,9 @@ export default function App() {
         setInfoPopupOpen(true)
         setInfoPopupText(`${err} Попробуйте еще раз`)
         setIsSuccess(false)
+      })
+      .finally(() => {
+        setIsLoading(false)
       })
   }
 
@@ -164,7 +170,6 @@ export default function App() {
 
   function closePupup() {
     setInfoPopupOpen(false)
-    setIsLoading(false)
   }
 
   function closePopupOnOverlay(event) {
@@ -215,6 +220,7 @@ export default function App() {
               loggedIn={loggedIn}
               savedMovies={savedMovies}
               component={SavedMovies}
+              isLoading={isLoading}
               onRemoveCard={handleMovieRemoval} />
             <Footer /> </>} />
 
