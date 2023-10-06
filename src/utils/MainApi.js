@@ -83,8 +83,7 @@ export const addNewFavoriteMovie = (data) => {
       description: data.description,
       image: 'https://api.nomoreparties.co' + data.image.url,
       trailerLink: data.trailerLink,
-      thumbnail:
-        'https://api.nomoreparties.co' + data.image.formats.thumbnail.url,
+      thumbnail: 'https://api.nomoreparties.co' + data.image.formats.thumbnail.url,
       movieId: data.id,
       nameRU: data.nameRU,
       nameEN: data.nameEN,
