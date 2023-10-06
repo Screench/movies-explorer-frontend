@@ -35,7 +35,7 @@ export default function MoviesCard({
             alt={card.nameRU}
             src={isLikedFilms
               ? card.image
-              : `https://api.nomoreparties.co/${card.image.url}`} /></a>
+              : `https://api.nomoreparties.co${card.image.url}`} /></a>
         <div className='card__container'>
           {isLikedFilms ?
             (<button type='button' className='card__btn-delete' onClick={onDelete}></button>) :

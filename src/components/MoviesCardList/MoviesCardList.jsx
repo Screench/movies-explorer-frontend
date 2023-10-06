@@ -65,7 +65,7 @@ export default function MoviesCardList({
   return (
     <section className='cards'>
       {isLoading && <Preloader />}
-      {cards.length === 0 && isNotFound && !isLoading && (<SearchError errorText={'Ничего не найдено'} />)}
+      {isNotFound && !isLoading && (<SearchError errorText={'Ничего не найдено'} />)}
       {isFetchError && !isLoading && (<SearchError errorText={'Проблема с соединением. Попробуйте позже'}/>)}
       {!isLoading && !isFetchError && !isNotFound && (
         
