@@ -7,7 +7,7 @@ import './Movies.css'
 
 export default function Movies({ handleLikeFilm, onRemoveCard, savedMovies, loggedIn, }) {
 
-  const [filtratedMovies, setFiltratedMovies] = useState([])
+  const [filteredMovies, setFilteredMovies] = useState([])
   const [startMovies, setStartMovies] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [isShortDurationMovies, setIsShortDurationMovies] = useState(false)
@@ -40,7 +40,7 @@ export default function Movies({ handleLikeFilm, onRemoveCard, savedMovies, logg
   function handleMovieFiltration(movies, query, short) {
     const moviesCardList = findShortDurationMovie(movies, query, short)
     setStartMovies(moviesCardList)
-    setFiltratedMovies(short ? filterByMovieDuration(moviesCardList) : moviesCardList)
+    setFilteredMovies(short ? filterByMovieDuration(moviesCardList) : moviesCardList)
     localStorage.setItem('movies', JSON.stringify(moviesCardList))
     localStorage.setItem('allMoviesCollection', JSON.stringify(movies))
   }
@@ -48,8 +48,8 @@ export default function Movies({ handleLikeFilm, onRemoveCard, savedMovies, logg
   function switchToShortDurationFilm() {
     setIsShortDurationMovies(!isShortDurationMovies)
     if (!isShortDurationMovies) {
-      setFiltratedMovies(filterByMovieDuration(startMovies))
-    } else { setFiltratedMovies(startMovies) }
+      setFilteredMovies(filterByMovieDuration(startMovies))
+    } else { setFilteredMovies(startMovies) }
     localStorage.setItem('shortDurationMovies', !isShortDurationMovies)
   }
 
@@ -58,8 +58,8 @@ export default function Movies({ handleLikeFilm, onRemoveCard, savedMovies, logg
       const movies = JSON.parse(localStorage.getItem('movies'))
       setStartMovies(movies)
       if (localStorage.getItem('shortDurationMovies') === 'true') {
-        setFiltratedMovies(filterByMovieDuration(movies))
-      } else {setFiltratedMovies(movies)}
+        setFilteredMovies(filterByMovieDuration(movies))
+      } else {setFilteredMovies(movies)}
     }
   }, [])
 
@@ -71,11 +71,11 @@ export default function Movies({ handleLikeFilm, onRemoveCard, savedMovies, logg
 
   useEffect(() => {
     if (localStorage.getItem('movieSearch')) {
-      if (filtratedMovies.length === 0) {
+      if (filteredMovies.length === 0) {
         setIsNotFound(true)
       } else { setIsNotFound(false) }
     } else { setIsNotFound(false) }
-  }, [filtratedMovies])
+  }, [filteredMovies])
 
   return (
     <section className='movies'>
@@ -85,7 +85,7 @@ export default function Movies({ handleLikeFilm, onRemoveCard, savedMovies, logg
         onSearchMovies={handleMoviesSearch}
         isLoading={isLoading} />
       <MoviesCardList
-        cards={filtratedMovies}
+        cards={filteredMovies}
         isLikedFilms={false}
         isNotFound={isNotFound}
         isLoading={isLoading}

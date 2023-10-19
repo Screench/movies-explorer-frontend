@@ -4,7 +4,7 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList'
 import { filterByMovieDuration, findShortDurationMovie } from '../../utils/utils'
 
 export default function SavedMovies({ savedMovies, onRemoveCard, loggedIn, isLoading }) {
-  const [filtratedMovies, setFiltratedMovies] = useState(savedMovies)
+  const [filteredMovies, setFilteredMovies] = useState(savedMovies)
   const [isShortDurationMovies, setIsShortDurationMovies] = useState(false)
   
   const [searchQuery, setSearchQuery] = useState('')
@@ -20,18 +20,18 @@ export default function SavedMovies({ savedMovies, onRemoveCard, loggedIn, isLoa
 
   useEffect(() => {
     const moviesCardList = findShortDurationMovie(savedMovies, searchQuery)
-    setFiltratedMovies(
+    setFilteredMovies(
       isShortDurationMovies ? filterByMovieDuration(moviesCardList) : moviesCardList
     )
   }, [savedMovies, isShortDurationMovies, searchQuery])
 
   useEffect(() => {
-    if (filtratedMovies.length === 0) {
+    if (filteredMovies.length === 0) {
       setIsNotFound(true)
     } else {
       setIsNotFound(false)
     }
-  }, [filtratedMovies])
+  }, [filteredMovies])
 
   return (
     <section className='movies'>
@@ -40,7 +40,7 @@ export default function SavedMovies({ savedMovies, onRemoveCard, loggedIn, isLoa
         onMoviesFiltration={switchToShortDurationFilm}
         isLoading={isLoading}/>
       <MoviesCardList 
-        cards={filtratedMovies}
+        cards={filteredMovies}
         isLikedFilms={true}
         savedMovies={savedMovies}
         onRemoveCard={onRemoveCard}
